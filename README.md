@@ -22,3 +22,6 @@ DogType: An enumeration of available dog types (terrier, bulldog, dalmatian).
 
 ### License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Author
+Albina Burlova
