@@ -59,7 +59,7 @@ def get_dogs(kind: DogType = None) -> List[Dog]:
 
 @app.post('/dog', summary='Create Dog')
 def create_dog(dog: Dog):
-    if dog.pk in dogs_db:
+    if dog.pk in list(dogs_db.keys()):
         raise HTTPException(status_code=409, detail="Dog already exists")
     dogs_db[dog.pk] = dog
     return dog
