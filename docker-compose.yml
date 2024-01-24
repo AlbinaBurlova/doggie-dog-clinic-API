@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  fastapi:
+    build: ./app
+    ports:
+      - "5555:5555"
+      
+  bot:
+    build: ./bot
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - API_URL=http://fastapi:5555
+      
