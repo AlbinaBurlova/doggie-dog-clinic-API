@@ -3,13 +3,21 @@ version: '3'
 services:
 
   fastapi:
-    build: ./app
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "5555:5555"
       
   bot:
-    build: ./bot
+    build:
+      context: .
+      dockerfile: Dockerfile_bot
+    depends_on:
+      - fastapi
+    env_file:
+      - ./bot/.env
     environment:
       - BOT_TOKEN=${BOT_TOKEN}
       - API_URL=http://fastapi:5555
-      
+
