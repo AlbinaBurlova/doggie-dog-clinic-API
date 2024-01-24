@@ -33,6 +33,8 @@ docker-compose run -e BOT_TOKEN=your_bot_token bot
 
 GET /: Returns a welcome message.
 
+POST /post: Returns a list of timestamps.
+
 GET /dog: Returns a list of dogs. You can specify a kind parameter to filter dogs by type.
 
 POST /dog: Creates a new dog. Requires a request body with dog information.
@@ -40,6 +42,7 @@ POST /dog: Creates a new dog. Requires a request body with dog information.
 GET /dog/{pk}: Returns a dog with the given primary key.
 
 PATCH /dog/{pk}: Updates a dog with the given primary key. Requires a request body with the new dog information.
+
 
 ## Models
 
