@@ -29,7 +29,7 @@ or
 docker-compose run -e BOT_TOKEN=your_bot_token bot
 ```
 
-### Endpoints
+## Endpoints
 
 GET /: Returns a welcome message.
 
@@ -41,13 +41,13 @@ GET /dog/{pk}: Returns a dog with the given primary key.
 
 PATCH /dog/{pk}: Updates a dog with the given primary key. Requires a request body with the new dog information.
 
-### Models
+## Models
 
 Dog: A dog model that includes a name (name), primary key (pk), and type (kind).
 
 DogType: An enumeration of available dog types (terrier, bulldog, dalmatian).
 
-### Bot Description
+## Bot Description
 
 The bot is designed to interact with the “Doggie Dog Clinic” API. It provides an interactive way to manage dog data. The bot uses inline keyboard buttons for user interaction. Here are the functionalities provided by the bot:
 
@@ -61,10 +61,10 @@ The bot is designed to interact with the “Doggie Dog Clinic” API. It provide
 The bot also checks if the server is available before performing any actions. If the server is not available, the bot informs the user and suggests trying again later.
 Please note that the bot currently only works with three kinds of dogs: terrier, bulldog, or dalmatian.
 
-### License
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-### Author
+## Author
 
 Albina Burlova
