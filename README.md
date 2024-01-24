@@ -2,7 +2,7 @@
 
 ## Description
 
-This microservice provides an API for managing dog data in "Doggie Dog Clinic". It allows you to retrieve, create, and update information about dogs. 
+This microservice provides an API for managing dog data in "Doggie Dog Clinic". It allows you to retrieve, create, and update information about dogs. The sevices are developed as a DevOps course assignment during study at HSE University Master’s Programme Machine Learning and Data-Intensive Systems.
 
 ## Link
 
