@@ -44,7 +44,7 @@ def root():
     return {'Welcome to Doggie Dog Clinic Microservice!'}
 
 
-@app.get('/post', summary='Get Post')
+@app.post('/post', summary='Get Post')
 def get_post():
     return post_db
 
@@ -57,7 +57,7 @@ def get_dogs(kind: DogType = None) -> List[Dog]:
         return list(dogs_db.values())
 
 
-@app.get('/dog', summary='Create Dog')
+@app.post('/dog', summary='Create Dog')
 def create_dog(dog: Dog):
     if dog.pk in dogs_db:
         raise HTTPException(status_code=409, detail="Dog already exists")
@@ -72,7 +72,7 @@ def get_dog_by_pk(pk: int):
     return dogs_db[pk]
 
 
-@app.get('/dog/{pk}', summary='Update Dog')
+@app.patch('/dog/{pk}', summary='Update Dog')
 def update_dog(pk: int, dog: Dog):
     if pk not in dogs_db:
         raise HTTPException(status_code=404, detail="Dog not found")
